@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+
+body {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+nav {
+    background-color: black;
+    padding: 0 30px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    color: white;
+}
+
+nav,
+ul {
+    display: flex;
+    flex-direction: row;
+}
+
+ul li {
+    color: #FFF;
+    display: inline;
+    margin: 10px;
+    font-size:larger;
+}
+
+button{
+    background-color: transparent;
+    border: none;
+    color: aliceblue;
+    font-size: 45px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    display: none;
+}
+
+h1:hover,
+li:hover,
+button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+button:focus ~ ul{
+    height: 200px;
+}
+
+@media (max-width: 670px) {
+    nav,ul{
+        flex-direction: column;
+    }
+    ul{
+        text-align: center;
+        margin: 0;
+       height: 0;
+    }
+    nav{
+        padding: 0;
+        align-items: flex-start;
+    }
+    h1{
+        margin: 20px;
+    }
+    button{
+        display: flex;
+    }
+    li, ul{
+        width: 100%;
+    }
+}
