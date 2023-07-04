@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Valorant Go</h1>
+        <h2>As armas do jogo e inscrição para o campeonato</h2>
+    </header>
+    <main>
+        <form class="form" action="">
+            <fieldset>
+                <legend>
+                    <h2 id="h2">Incrição pro campeonato de várzea</h2>
+                </legend>
+                <fieldset>
+                    <legend>Dados pessoais</legend>
+                    <label for="campoNome">Nome:</label>
+                    <input class="inputForm" type="text" ; name="campoNome">
+                    <br> <br>
+                    <label for="campoNumero">Número: </label>
+                    <input class="inputForm" type="number" name="campoNumero">
+                    <br><br>
+                    <label for="campoData">Data de nascimento: </label>
+                    <input class="inputForm" type="date" ; name="campoData">
+                    <br> <br>
+
+                    <label for="campoGenero">Modalidade: </label>
+                    <input class="inputForm" type="radio" ; name="campoGenero" ; value="misto">
+                    <label for="misto">Misto</label>
+                    <input class="inputForm" type="radio" ; name="campoGenero" ; value="feminino">
+                    <label for="feminino">Feminino</label>
+                </fieldset>
+                <fieldset>
+                    <legend>In-Game</legend>
+                    <label for="rank">Rank atual:</label>
+                    <select id="rank" name="rank">
+                        <option value="">Selecione o rank</option>
+                        <option value="ferro">Ferro</option>
+                        <option value="bronze">Bronze</option>
+                        <option value="prata">Prata</option>
+                        <option value="ouro">Ouro</option>
+                        <option value="platina">Platina</option>
+                        <option value="diamante">Diamante</option>
+                        <option value="imortal">Imortal</option>
+                        <option value="radiante">Radiante</option>
+                    </select>
+                    <br><br>
+                    <label for="nick">NickName:</label>
+                    <input class="inputForm" type="text" ; name="nick">
+                    <br><br>
+                    <label for="tag">Tag:</label>
+                    <input class="inputForm" type="text" ; name="tag">
+                    <br><br>
+                    <label for="pro">Já foi pro-player? (time da escola não vale): </label>
+                    <input type="radio" ; name="pro" ; value="sim">
+                    <label for="sim">sim</label>
+                    <input type="radio" ; name="pro" ; value="nao">
+                    <label for="nao">nao</label>
+                </fieldset>
+                <fieldset>
+                    <legend>Informações adicionais: </legend>
+                    <textarea name="descricao" id="desc" cols="50" placeholder="Digite o comentário..." rows="4"></textarea>
+                </fieldset>
+                <br>
+                <button class="buttonForm" type="submit">Enviar</button>
+                <button class="buttonForm" type="reset">reset</button>
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+        <div>
+            <label for="nome">Dúvidas:</label>
+            <input class="inputDuvida" type="text" id="nome" name="nome">
+            <button class="butotnFooter" type="submit">Enviar</button>
+            <br>
+        </div>
+        <div class="play">
+
+        </div>
+        <h2 class="contato">Contato - (99) 12345679</h2>
+        </div>
+    </footer>
+    <script>
+       var el1 = document.querySelector('.form textarea');
+       el1.style.border = '5px solid red';
+
+       var el2 = document.getElementById('h2');
+       el2.style.color = 'red';
+    </script>
+</body>
