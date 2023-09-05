@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+        <title>Quiz de JavaScript</title>
+
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>Quiz de JavaScript</h1>
+
+            <div class="question">
+                <p>Pergunta 1: Qual é a linguagem de programação que estamos estudando?</p>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q1" value="javascript"> JavaScript</label>
+                    <label class="option"><input type="radio" name="q1" value="Python"> Python</label>
+                    <label class="option"><input type="radio" name="q1" value="C++">C++</label>
+                    <label class="option"><input type="radio" name="q1" value="C#">C#</label>
+                    <label class="option"><input type="radio" name="q1" value="Java">Java</label>
+                </div>
+                <button class="submit-button">Enviar</button>
+                <span class="tag correct">Correto!</span>
+                <span class="tag incorrect">Incorreto.</span>
+            </div>
+
+            <!-- Repita o mesmo padrão para as próximas questões -->
+
+            <div class="question">
+                <p>Pergunta 2: Qual ano lançou a Lux?</p>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q2" value="2013">2013</label>
+                    <label class="option"><input type="radio" name="q2" value="2012">2012</label>
+                    <label class="option"><input type="radio" name="q2" value="2014">2014</label>
+                    <label class="option"><input type="radio" name="q2" value="2015">2015</label>
+                    <label class="option"><input type="radio" name="q2" value="2009">2009</label>
+                </div>
+                <button class="submit-button">Enviar</button>
+                <span class="tag correct">Correto!</span>
+                <span class="tag incorrect">Incorreto.</span>
+            </div>
+
+            <div class="question">
+                <p>Pergunta 3: Qual melhor campeao de lol??</p>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q3" value="Sona"> Sona</label>
+                    <label class="option"><input type="radio" name="q3" value="Lux">Lux</label>
+                    <label class="option"><input type="radio" name="q3" value="Gragas">Gragas</label>
+                    <label class="option"><input type="radio" name="q3" value="WW">WW</label>
+                    <label class="option"><input type="radio" name="q3" value="Dr.mundo">Dr. Mundo</label>
+                </div>
+                <button class="submit-button">Enviar</button>
+                <span class="tag correct">Correto!</span>
+                <span class="tag incorrect">Incorreto.</span>
+            </div>
+            <div class="question">
+                <p>Pergunta 4: Qual personagem fala "Você machuca os outros, eu MACHUCO VOCÊ"</p>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q4" value="Jax">Jax</label>
+                    <label class="option"><input type="radio" name="q4" value="Darius"> Darius</label>
+                    <label class="option"><input type="radio" name="q4" value="WarWick">WarWick</label>
+                    <label class="option"><input type="radio" name="q4" value="Jayce">Jayce</label>
+                    <label class="option"><input type="radio" name="q4" value="Briar">Briar</label>
+                </div>
+                <button class="submit-button">Enviar</button>
+                <span class="tag correct">Correto!</span>
+                <span class="tag incorrect">Incorreto.</span>
+            </div>
+            <div class="question">
+                <p>Pergunta 5: Qual a pior role do jogo?</p>
+                <div class="options">
+                    <label class="option"><input type="radio" name="q5" value="ADC"> ADC</label>
+                    <label class="option"><input type="radio" name="q5" value="Suporte"> Suporte</label>
+                    <label class="option"><input type="radio" name="q5" value="Top"> Top</label>
+                    <label class="option"><input type="radio" name="q5" value="Mid">Mid</label>
+                    <label class="option"><input type="radio" name="q5" value="Jungle">Jungle</label>
+                </div>
+                <button class="submit-button">Enviar</button>
+                <span class="tag correct">Correto!</span>
+                <span class="tag incorrect">Incorreto.</span>
+            </div>
+            <!-- Repita o mesmo padrão para as próximas questões -->
+        </div>
+
+        <script>
+
+            var btn = document.querySelectorAll("button")
+            var inputs = document.querySelectorAll("input")
+            var correta = document.getElementsByClassName("tag correct")
+            var incorreta = document.getElementsByClassName("tag incorrect")
+
+
+            btn.forEach(element => {element.addEventListener("click", respostacerta)});
+
+
+            btn.forEach(element => {
+                element.disabled = true
+            })
+
+            btn[0].disabled = false
+
+            inputs.forEach(element => {
+                element.disabled = true
+            })
+
+            inputs[0].disabled = false
+            inputs[1].disabled = false
+            inputs[2].disabled = false
+            inputs[3].disabled = false
+            inputs[4].disabled = false
+
+            function respostacerta() {
+                
+                var q1 = document.querySelector('input[name="q1"]:checked').value;
+                if (q1 == "javascript") {
+                    correta[0].style.display = "block"
+                    incorreta[0].style.display = "none"
+                    btn[1].disabled = false
+                    inputs[0].disabled = false
+            inputs[5].disabled = false
+            inputs[6].disabled = false
+            inputs[7].disabled = false
+            inputs[8].disabled = false
+                }
+                else {
+                    correta[0].style.display = "none"
+                    incorreta[0].style.display = "block"
+                }
+                var q2 = document.querySelector('input[name="q2"]:checked').value;
+                if (q2 == "2014") {
+                    correta[1].style.display = "block"
+                    incorreta[1].style.display = "none"
+                    btn[2].disabled = false
+                    inputs[0].disabled = false
+            inputs[9].disabled = false
+            inputs[10].disabled = false
+            inputs[11].disabled = false
+            inputs[12].disabled = false
+                }
+                else {
+                    incorreta[1].style.display = "block"
+                    correta[1].style.display = "none"
+                }
+                var q3 = document.querySelector('input[name="q3"]:checked').value;
+                if (q3 == "WW") {
+                    correta[2].style.display = "block"
+                    incorreta[2].style.display = "none"
+                    btn[3].disabled = false
+                    inputs[0].disabled = false
+            inputs[13].disabled = false
+            inputs[14].disabled = false
+            inputs[15].disabled = false
+            inputs[16].disabled = false
+                }
+                else {
+                    incorreta[2].style.display = "block"
+                    correta[2].style.display = "none"
+                }
+                var q4 = document.querySelector('input[name="q4"]:checked').value;
+                if (q4 == "WarWick") {
+                    correta[3].style.display = "block"
+                    incorreta[3].style.display = "none"
+                    btn[4].disabled = false
+                    inputs[0].disabled = false
+            inputs[17].disabled = false
+            inputs[18].disabled = false
+            inputs[19].disabled = false
+            inputs[20].disabled = false
+                }
+                else {
+                    incorreta[3].style.display = "block"
+                    correta[3].style.display = "none"
+                }
+                var q5 = document.querySelector('input[name="q5"]:checked').value;
+                if (q5 == "ADC") {
+                    correta[4].style.display = "block"
+                    incorreta[4].style.display = "none"
+                    btn[5].disabled = false
+                    inputs[0].disabled = false
+            inputs[21].disabled = false
+            inputs[22].disabled = false
+            inputs[23].disabled = false
+            inputs[24].disabled = false
+                }
+                else {
+                    incorreta[4].style.display = "block"
+                    correta[4].style.display = "none"
+                }
+            }
+        </script>
+    </body>
+
+    </html>
+
+</body>
+
+</html>
